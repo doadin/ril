@@ -75,7 +75,7 @@ static struct ril_event pending_list;
 #define DEBUG 0
 
 #if DEBUG
-#define dlog(x...) LOGD( x )
+#define dlog(x...) RLOGD( x )
 static void dump_event(struct ril_event * ev)
 {
     dlog("~~~~ Event %x ~~~~", (unsigned int)ev);
@@ -319,6 +319,7 @@ void ril_event_del(struct ril_event * ev)
     MUTEX_ACQUIRE();
 
     if (ev->index < 0 || ev->index >= MAX_FD_EVENTS) {
+        MUTEX_RELEASE();
         return;
     }
 
