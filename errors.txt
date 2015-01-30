@@ -1,0 +1,150 @@
+device/samsung/ancora_tmo/libril/ril.cpp:322:8: warning: unused parameter 'data' [-Wunused-parameter]
+ void   nullParcelReleaseFunction (const uint8_t* data, size_t dataSize,
+        ^
+device/samsung/ancora_tmo/libril/ril.cpp:322:8: warning: unused parameter 'dataSize' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:322:8: warning: unused parameter 'objects' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:322:8: warning: unused parameter 'objectsSize' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:322:8: warning: unused parameter 'cookie' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:435:1: warning: unused parameter 'p' [-Wunused-parameter]
+ dispatchVoid (Parcel& p, RequestInfo *pRI) {
+ ^
+target thumb C++: libsurfaceflinger <= frameworks/native/services/surfaceflinger/RenderEngine/ProgramCache.cpp
+device/samsung/ancora_tmo/libril/ril.cpp:917:1: warning: unused parameter 'pRI' [-Wunused-parameter]
+ constructCdmaSms(Parcel &p, RequestInfo *pRI, RIL_CDMA_SMS_Message& rcsm) {
+ ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'void android::dispatchImsCdmaSms(android::Parcel&, android::RequestInfo*, uint8_t, int32_t)':
+device/samsung/ancora_tmo/libril/ril.cpp:1030:10: error: 'struct RIL_IMS_SMS_Message' has no member named 'retry'
+     rism.retry = retry;
+          ^
+device/samsung/ancora_tmo/libril/ril.cpp:1031:10: error: 'struct RIL_IMS_SMS_Message' has no member named 'messageRef'
+     rism.messageRef = messageRef;
+          ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'void android::dispatchImsGsmSms(android::Parcel&, android::RequestInfo*, uint8_t, int32_t)':
+device/samsung/ancora_tmo/libril/ril.cpp:1067:10: error: 'struct RIL_IMS_SMS_Message' has no member named 'retry'
+     rism.retry = retry;
+          ^
+device/samsung/ancora_tmo/libril/ril.cpp:1068:10: error: 'struct RIL_IMS_SMS_Message' has no member named 'messageRef'
+     rism.messageRef = messageRef;
+          ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'void android::dispatchSetInitialAttachApn(android::Parcel&, android::RequestInfo*)':
+device/samsung/ancora_tmo/libril/ril.cpp:1499:5: error: 'RIL_InitialAttachApn' was not declared in this scope
+     RIL_InitialAttachApn pf;
+     ^
+device/samsung/ancora_tmo/libril/ril.cpp:1499:26: error: expected ';' before 'pf'
+     RIL_InitialAttachApn pf;
+                          ^
+device/samsung/ancora_tmo/libril/ril.cpp:1503:13: error: 'pf' was not declared in this scope
+     memset(&pf, 0, sizeof(pf));
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp: At global scope:
+device/samsung/ancora_tmo/libril/ril.cpp:1743:12: warning: unused parameter 'network_search' [-Wunused-parameter]
+ static int responseStrings(Parcel &p, void *response, size_t responselen, bool network_search) {
+            ^
+device/samsung/ancora_tmo/libril/ril.cpp:1780:12: warning: unused parameter 'responselen' [-Wunused-parameter]
+ static int responseString(Parcel &p, void *response, size_t responselen) {
+            ^
+device/samsung/ancora_tmo/libril/ril.cpp:1791:12: warning: unused parameter 'p' [-Wunused-parameter]
+ static int responseVoid(Parcel &p, void *response, size_t responselen) {
+            ^
+device/samsung/ancora_tmo/libril/ril.cpp:1791:12: warning: unused parameter 'response' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:1791:12: warning: unused parameter 'responselen' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'int android::responseRilSignalStrength(android::Parcel&, void*, size_t)':
+device/samsung/ancora_tmo/libril/ril.cpp:2373:52: error: 'struct RIL_LTE_SignalStrength' has no member named 'rssnr'
+             p.writeInt32(p_cur->LTE_SignalStrength.rssnr);
+                                                    ^
+device/samsung/ancora_tmo/libril/ril.cpp:2375:52: error: 'struct RIL_LTE_SignalStrength' has no member named 'cqi'
+             p.writeInt32(p_cur->LTE_SignalStrength.cqi);
+                                                    ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'int android::responseCdmaCallWaiting(android::Parcel&, void*, size_t)':
+device/samsung/ancora_tmo/libril/ril.cpp:2455:30: error: 'RIL_CDMA_CallWaiting_v6' was not declared in this scope
+     if (responselen < sizeof(RIL_CDMA_CallWaiting_v6)) {
+                              ^
+device/samsung/ancora_tmo/libril/ril.cpp:2459:5: error: 'RIL_CDMA_CallWaiting_v6' was not declared in this scope
+     RIL_CDMA_CallWaiting_v6 *p_cur = ((RIL_CDMA_CallWaiting_v6 *) response);
+     ^
+device/samsung/ancora_tmo/libril/ril.cpp:2459:30: error: 'p_cur' was not declared in this scope
+     RIL_CDMA_CallWaiting_v6 *p_cur = ((RIL_CDMA_CallWaiting_v6 *) response);
+                              ^
+device/samsung/ancora_tmo/libril/ril.cpp:2459:65: error: expected primary-expression before ')' token
+     RIL_CDMA_CallWaiting_v6 *p_cur = ((RIL_CDMA_CallWaiting_v6 *) response);
+                                                                 ^
+device/samsung/ancora_tmo/libril/ril.cpp:2459:67: error: expected ')' before 'response'
+     RIL_CDMA_CallWaiting_v6 *p_cur = ((RIL_CDMA_CallWaiting_v6 *) response);
+                                                                   ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'int android::responseSimRefresh(android::Parcel&, void*, size_t)':
+device/samsung/ancora_tmo/libril/ril.cpp:2501:9: error: 'RIL_SimRefreshResponse_v7' was not declared in this scope
+         RIL_SimRefreshResponse_v7 *p_cur = ((RIL_SimRefreshResponse_v7 *) response);
+         ^
+device/samsung/ancora_tmo/libril/ril.cpp:2501:36: error: 'p_cur' was not declared in this scope
+         RIL_SimRefreshResponse_v7 *p_cur = ((RIL_SimRefreshResponse_v7 *) response);
+                                    ^
+device/samsung/ancora_tmo/libril/ril.cpp:2501:73: error: expected primary-expression before ')' token
+         RIL_SimRefreshResponse_v7 *p_cur = ((RIL_SimRefreshResponse_v7 *) response);
+                                                                         ^
+device/samsung/ancora_tmo/libril/ril.cpp:2501:75: error: expected ')' before 'response'
+         RIL_SimRefreshResponse_v7 *p_cur = ((RIL_SimRefreshResponse_v7 *) response);
+                                                                           ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'int android::responseCellInfoList(android::Parcel&, void*, size_t)':
+device/samsung/ancora_tmo/libril/ril.cpp:2553:15: warning: enumeration value 'RIL_CELL_INFO_TYPE_TD_SCDMA' not handled in switch [-Wswitch]
+         switch(p_cur->cellInfoType) {
+               ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'int android::responseSimStatus(android::Parcel&, void*, size_t)':
+device/samsung/ancora_tmo/libril/ril.cpp:2710:32: error: 'RIL_CardStatus_v6' was not declared in this scope
+     if (responselen == sizeof (RIL_CardStatus_v6)) {
+                                ^
+target thumb C++: libsurfaceflinger <= frameworks/native/services/surfaceflinger/RenderEngine/GLExtensions.cpp
+device/samsung/ancora_tmo/libril/ril.cpp:2712:28: error: 'p_cur' was not declared in this scope
+         RIL_CardStatus_v6 *p_cur = ((RIL_CardStatus_v6 *) response);
+                            ^
+device/samsung/ancora_tmo/libril/ril.cpp:2712:57: error: expected primary-expression before ')' token
+         RIL_CardStatus_v6 *p_cur = ((RIL_CardStatus_v6 *) response);
+                                                         ^
+device/samsung/ancora_tmo/libril/ril.cpp:2712:59: error: expected ')' before 'response'
+         RIL_CardStatus_v6 *p_cur = ((RIL_CardStatus_v6 *) response);
+                                                           ^
+device/samsung/ancora_tmo/libril/ril.cpp:2721:39: error: 'RIL_CardStatus_v5' was not declared in this scope
+     } else if (responselen == sizeof (RIL_CardStatus_v5)) {
+                                       ^
+device/samsung/ancora_tmo/libril/ril.cpp:2723:28: error: 'p_cur' was not declared in this scope
+         RIL_CardStatus_v5 *p_cur = ((RIL_CardStatus_v5 *) response);
+                            ^
+device/samsung/ancora_tmo/libril/ril.cpp:2723:57: error: expected primary-expression before ')' token
+         RIL_CardStatus_v5 *p_cur = ((RIL_CardStatus_v5 *) response);
+                                                         ^
+device/samsung/ancora_tmo/libril/ril.cpp:2723:59: error: expected ')' before 'response'
+         RIL_CardStatus_v5 *p_cur = ((RIL_CardStatus_v5 *) response);
+                                                           ^
+device/samsung/ancora_tmo/libril/ril.cpp: At global scope:
+device/samsung/ancora_tmo/libril/ril.cpp:2854:13: warning: unused parameter 'fd' [-Wunused-parameter]
+ static void processWakeupCallback(int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:2854:13: warning: unused parameter 'flags' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2854:13: warning: unused parameter 'param' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2888:13: warning: unused parameter 'fd' [-Wunused-parameter]
+ static void processCommandsCallback(int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:2888:13: warning: unused parameter 'flags' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2967:13: warning: unused parameter 'fd' [-Wunused-parameter]
+ static void listenCallback (int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:2967:13: warning: unused parameter 'flags' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2967:13: warning: unused parameter 'param' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:3058:13: warning: unused parameter 'flags' [-Wunused-parameter]
+ static void debugCallback (int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:3058:13: warning: unused parameter 'param' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:3186:13: warning: unused parameter 'fd' [-Wunused-parameter]
+ static void userTimerCallback (int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:3186:13: warning: unused parameter 'flags' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:3204:1: warning: unused parameter 'param' [-Wunused-parameter]
+ eventLoop(void *param) {
+ ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'RIL_RadioState android::processRadioState(RIL_RadioState)':
+device/samsung/ancora_tmo/libril/ril.cpp:3593:40: error: 'RIL_UNSOL_VOICE_RADIO_TECH_CHANGED' was not declared in this scope
+             RIL_onUnsolicitedResponse (RIL_UNSOL_VOICE_RADIO_TECH_CHANGED,
+                                        ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'const char* android::requestToString(int)':
+device/samsung/ancora_tmo/libril/ril.cpp:3999:14: error: 'RIL_UNSOL_VOICE_RADIO_TECH_CHANGED' was not declared in this scope
+         case RIL_UNSOL_VOICE_RADIO_TECH_CHANGED: return "UNSOL_VOICE_RADIO_TECH_CHANGED";
+              ^
