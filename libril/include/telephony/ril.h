@@ -3947,6 +3947,17 @@ typedef struct {
  */
 #define RIL_UNSOL_EXIT_EMERGENCY_CALLBACK_MODE 1033
 
++/**
++ * RIL_UNSOL_RIL_CONNECTED
++ *
++ * Called the ril connects and returns the version
++ *
++ * "data" is int *
++ * ((int *)data)[0] is RIL_VERSION
++ */
+
+#define RIL_UNSOL_RIL_CONNECTED 1034
+
 /**
  * RIL_UNSOL_VOICE_RADIO_TECH_CHANGED
  *
@@ -3954,11 +3965,9 @@ typedef struct {
  * Callee will invoke the following requests on main thread: RIL_REQUEST_VOICE_RADIO_TECH
  *
  */
-/**
- *#define RIL_UNSOL_VOICE_RADIO_TECH_CHANGED 1034
- *
- */
-#define RIL_UNSOL_RIL_CONNECTED 1034
+
+#define RIL_UNSOL_VOICE_RADIO_TECH_CHANGED 1035
+
 
 /**
  * RIL_UNSOL_RESPONSE_IMS_NETWORK_STATE_CHANGED
