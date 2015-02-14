@@ -15,17 +15,7 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libhardware_legacy
 
-LOCAL_CFLAGS :=
-ifdef BOARD_USE_NEW_LIBRIL_HTC
-    LOCAL_CFLAGS += -DNEW_LIBRIL_HTC
-endif
-
 LOCAL_MODULE:= libril
-
-#USE HCRADIO
-ifeq ($(BOARD_USES_HC_RADIO),true)
-LOCAL_CFLAGS += -DHCRADIO
-endif
 
 ifeq ($(BOARD_USES_LEGACY_RIL),true)
 LOCAL_CFLAGS += -DLEGACY_RIL
