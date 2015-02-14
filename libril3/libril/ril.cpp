@@ -19,8 +19,8 @@
 
 #include <hardware_legacy/power.h>
 
-#include <telephony/ril.h>
-#include <telephony/ril_cdma_sms.h>
+#include "include/telephony/ril.h"
+#include "include/telephony/ril_cdma_sms.h"
 #include <cutils/sockets.h>
 #include <cutils/jstring.h>
 #include <cutils/record_stream.h>
