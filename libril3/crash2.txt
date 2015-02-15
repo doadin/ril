@@ -1,0 +1,31 @@
+I/DEBUG   (  168): *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+
+I/DEBUG   (  168): Build fingerprint: 'samsung/SGH-T679/SGH-T679:2.3.6/GINGERBREAD/UVLE1:user/release-keys'
+
+I/DEBUG   (  168): Revision: '0'
+
+I/DEBUG   (  168): ABI: 'arm'
+
+I/DEBUG   (  168): pid: 169, tid: 202, name: rild  >>> /system/bin/rild <<<
+
+I/DEBUG   (  168): signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
+
+W/NativeCrashListener(  491): Couldn't find ProcessRecord for pid 169
+
+I/DEBUG   (  168):     r0 405817d8  r1 00000000  r2 00000008  r3 0000002c
+
+E/DEBUG   (  168): AM write failure (32 / Broken pipe)
+
+I/DEBUG   (  168):     r4 405817d8  r5 00000000  r6 0000271e  r7 00000000
+
+I/DEBUG   (  168):     r8 40581770  r9 00000000  sl 4034477c  fp 40344730
+
+I/DEBUG   (  168):     ip 405817d8  sp 40bf9bf8  lr 4075d519  pc 4043fd08  cpsr 800b0010
+
+I/DEBUG   (  168): 
+
+I/DEBUG   (  168): backtrace:
+
+I/DEBUG   (  168):     #00 pc 0000fd08  /system/lib/libc.so (memcpy+128)
+
+I/DEBUG   (  168):     #01 pc 00015515  /system/lib/libsec-ril.so
