@@ -113,6 +113,9 @@ namespace android {
     #define appendPrintBuf(x...)
 #endif
 
+#define MAX_RIL_SOL     RIL_REQUEST_SET_SMSC_ADDRESS
+#define MAX_RIL_UNSOL   RIL_UNSOL_VOICE_RADIO_TECH_CHANGED
+
 enum WakeType {DONT_WAKE, WAKE_PARTIAL};
 
 typedef struct {
@@ -323,13 +326,22 @@ void   nullParcelReleaseFunction (const uint8_t* data, size_t dataSize,
 static void
 issueLocalRequest(int request, void *data, int len) {
     RequestInfo *pRI;
+    int index;
     int ret;
 
     pRI = (RequestInfo *)calloc(1, sizeof(RequestInfo));
 
     pRI->local = 1;
     pRI->token = 0xffffffff;        // token is not used in this context
-    pRI->pCI = &(s_commands[request]);
+
+    /* Hack to include Samsung requests */
+    if (request > 10000) {
+        index = request - 10000 + MAX_RIL_SOL;
+        RLOGD("SAMSUNG: request=%d, index=%d", request, index);
+        pRI->pCI = &(s_commands[index]);
+    } else {
+        pRI->pCI = &(s_commands[request]);
+    }
 
     ret = pthread_mutex_lock(&s_pendingRequestsMutex);
     assert (ret == 0);
@@ -340,7 +352,7 @@ issueLocalRequest(int request, void *data, int len) {
     ret = pthread_mutex_unlock(&s_pendingRequestsMutex);
     assert (ret == 0);
 
-    ALOGD("C[locl]> %s", requestToString(request));
+    RLOGD("C[locl]> %s", requestToString(request));
 
     s_callbacks.onRequest(request, data, len, pRI);
 }
