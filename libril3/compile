@@ -1,0 +1,183 @@
+target thumb C++: libril <= device/samsung/ancora_tmo/libril/ril.cpp
+In file included from device/samsung/ancora_tmo/libril/ril.cpp:259:0:
+device/samsung/ancora_tmo/libril/ril_commands.h:91:60: error: 'responseIntsGetPreferredNetworkType' was not declared in this scope
+     {RIL_REQUEST_GET_PREFERRED_NETWORK_TYPE, dispatchVoid, responseIntsGetPreferredNetworkType},
+                                                            ^
+device/samsung/ancora_tmo/libril/ril_commands.h:119:6: error: 'RIL_REQUEST_SET_CELL_BROADCAST_CONFIG' was not declared in this scope
+     {RIL_REQUEST_SET_CELL_BROADCAST_CONFIG, dispatchVoid, responseVoid}, // 10001
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:120:6: error: 'RIL_REQUEST_GET_CELL_BROADCAST_CONFIG' was not declared in this scope
+     {RIL_REQUEST_GET_CELL_BROADCAST_CONFIG, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:123:6: error: 'RIL_REQUEST_SEND_ENCODED_USSD' was not declared in this scope
+     {RIL_REQUEST_SEND_ENCODED_USSD, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:124:6: error: 'RIL_REQUEST_SET_PDA_MEMORY_STATUS' was not declared in this scope
+     {RIL_REQUEST_SET_PDA_MEMORY_STATUS, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:125:6: error: 'RIL_REQUEST_GET_PHONEBOOK_STORAGE_INFO' was not declared in this scope
+     {RIL_REQUEST_GET_PHONEBOOK_STORAGE_INFO, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:126:6: error: 'RIL_REQUEST_GET_PHONEBOOK_ENTRY' was not declared in this scope
+     {RIL_REQUEST_GET_PHONEBOOK_ENTRY, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:127:6: error: 'RIL_REQUEST_ACCESS_PHONEBOOK_ENTRY' was not declared in this scope
+     {RIL_REQUEST_ACCESS_PHONEBOOK_ENTRY, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:128:6: error: 'RIL_REQUEST_DIAL_VIDEO_CALL' was not declared in this scope
+     {RIL_REQUEST_DIAL_VIDEO_CALL, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:129:6: error: 'RIL_REQUEST_CALL_DEFLECTION' was not declared in this scope
+     {RIL_REQUEST_CALL_DEFLECTION, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:131:6: error: 'RIL_REQUEST_USIM_PB_CAPA' was not declared in this scope
+     {RIL_REQUEST_USIM_PB_CAPA, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:132:6: error: 'RIL_REQUEST_LOCK_INFO' was not declared in this scope
+     {RIL_REQUEST_LOCK_INFO, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:139:6: error: 'RIL_REQUEST_GET_SERIAL_NUMBER' was not declared in this scope
+     {RIL_REQUEST_GET_SERIAL_NUMBER, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:140:6: error: 'RIL_REQUEST_GET_MANUFACTURE_DATE_NUMBER' was not declared in this scope
+     {RIL_REQUEST_GET_MANUFACTURE_DATE_NUMBER, dispatchVoid, responseVoid},
+      ^
+device/samsung/ancora_tmo/libril/ril_commands.h:141:6: error: 'RIL_REQUEST_GET_BARCODE_NUMBER' was not declared in this scope
+     {RIL_REQUEST_GET_BARCODE_NUMBER, dispatchVoid, responseVoid},
+      ^
+In file included from device/samsung/ancora_tmo/libril/ril.cpp:263:0:
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:50:6: error: 'RIL_UNSOL_RELEASE_COMPLETE_MESSAGE' was not declared in this scope
+     {RIL_UNSOL_RELEASE_COMPLETE_MESSAGE, responseVoid, WAKE_PARTIAL}, // 11001
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:51:6: error: 'RIL_UNSOL_STK_SEND_SMS_RESULT' was not declared in this scope
+     {RIL_UNSOL_STK_SEND_SMS_RESULT, responseInts, WAKE_PARTIAL}, // 11002
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:53:6: error: 'RIL_UNSOL_STK_CALL_CONTROL_RESULT' was not declared in this scope
+     {RIL_UNSOL_STK_CALL_CONTROL_RESULT, responseVoid, WAKE_PARTIAL}, //11003
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:54:6: error: 'RIL_UNSOL_DUN_CALL_STATUS' was not declared in this scope
+     {RIL_UNSOL_DUN_CALL_STATUS, responseVoid, WAKE_PARTIAL}, //11004
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:57:6: error: 'RIL_UNSOL_O2_HOME_ZONE_INFO' was not declared in this scope
+     {RIL_UNSOL_O2_HOME_ZONE_INFO, responseVoid, WAKE_PARTIAL}, //11007
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:58:6: error: 'RIL_UNSOL_DEVICE_READY_NOTI' was not declared in this scope
+     {RIL_UNSOL_DEVICE_READY_NOTI, responseVoid, WAKE_PARTIAL}, //11008
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:59:6: error: 'RIL_UNSOL_GPS_NOTI' was not declared in this scope
+     {RIL_UNSOL_GPS_NOTI, responseVoid, WAKE_PARTIAL}, //11009
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:60:6: error: 'RIL_UNSOL_AM' was not declared in this scope
+     {RIL_UNSOL_AM, responseVoid, WAKE_PARTIAL}, //11010
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:63:6: error: 'RIL_UNSOL_SAP' was not declared in this scope
+     {RIL_UNSOL_SAP, responseVoid, WAKE_PARTIAL}, //11013
+      ^
+device/samsung/ancora_tmo/libril/ril_unsol_commands.h:66:6: error: 'RIL_UNSOL_HSDPA_STATE_CHANGED' was not declared in this scope
+     {RIL_UNSOL_HSDPA_STATE_CHANGED, responseVoid, WAKE_PARTIAL}, //11016
+      ^
+device/samsung/ancora_tmo/libril/ril.cpp:312:8: warning: unused parameter 'data' [-Wunused-parameter]
+ void   nullParcelReleaseFunction (const uint8_t* data, size_t dataSize,
+        ^
+device/samsung/ancora_tmo/libril/ril.cpp:312:8: warning: unused parameter 'dataSize' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:312:8: warning: unused parameter 'objects' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:312:8: warning: unused parameter 'objectsSize' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:312:8: warning: unused parameter 'cookie' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:406:1: warning: unused parameter 'p' [-Wunused-parameter]
+ dispatchVoid (Parcel& p, RequestInfo *pRI) {
+ ^
+device/samsung/ancora_tmo/libril/ril.cpp:1427:12: warning: unused parameter 'network_search' [-Wunused-parameter]
+ static int responseStrings(Parcel &p, void *response, size_t responselen, bool network_search) {
+            ^
+device/samsung/ancora_tmo/libril/ril.cpp:1465:12: warning: unused parameter 'responselen' [-Wunused-parameter]
+ static int responseString(Parcel &p, void *response, size_t responselen) {
+            ^
+device/samsung/ancora_tmo/libril/ril.cpp:1476:12: warning: unused parameter 'p' [-Wunused-parameter]
+ static int responseVoid(Parcel &p, void *response, size_t responselen) {
+            ^
+device/samsung/ancora_tmo/libril/ril.cpp:1476:12: warning: unused parameter 'response' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:1476:12: warning: unused parameter 'responselen' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2354:13: warning: unused parameter 'fd' [-Wunused-parameter]
+ static void processWakeupCallback(int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:2354:13: warning: unused parameter 'flags' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2354:13: warning: unused parameter 'param' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2388:13: warning: unused parameter 'fd' [-Wunused-parameter]
+ static void processCommandsCallback(int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:2388:13: warning: unused parameter 'flags' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2467:13: warning: unused parameter 'fd' [-Wunused-parameter]
+ static void listenCallback (int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:2467:13: warning: unused parameter 'flags' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2467:13: warning: unused parameter 'param' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'void android::debugCallback(int, short int, void*)':
+device/samsung/ancora_tmo/libril/ril.cpp:2618:39: error: 'RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED' was not declared in this scope
+             RIL_onUnsolicitedResponse(RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED,
+                                       ^
+device/samsung/ancora_tmo/libril/ril.cpp: At global scope:
+device/samsung/ancora_tmo/libril/ril.cpp:2558:13: warning: unused parameter 'flags' [-Wunused-parameter]
+ static void debugCallback (int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:2558:13: warning: unused parameter 'param' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2686:13: warning: unused parameter 'fd' [-Wunused-parameter]
+ static void userTimerCallback (int fd, short flags, void *param) {
+             ^
+device/samsung/ancora_tmo/libril/ril.cpp:2686:13: warning: unused parameter 'flags' [-Wunused-parameter]
+device/samsung/ancora_tmo/libril/ril.cpp:2704:1: warning: unused parameter 'param' [-Wunused-parameter]
+ eventLoop(void *param) {
+ ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'void android::RIL_onUnsolicitedResponse(int, void*, size_t)':
+device/samsung/ancora_tmo/libril/ril.cpp:3113:47: warning: declaration of 'void android::RIL_onUnsolicitedResponse(int, void*, size_t)' with C language linkage [enabled by default]
+                                 size_t datalen)
+                                               ^
+In file included from device/samsung/ancora_tmo/libril/ril.cpp:22:0:
+device/samsung/ancora_tmo/libril/include/telephony/ril.h:3983:6: warning: conflicts with previous declaration 'void RIL_onUnsolicitedResponse(int, const void*, size_t)' [enabled by default]
+ void RIL_onUnsolicitedResponse(int unsolResponse, const void *data,
+      ^
+device/samsung/ancora_tmo/libril/ril.cpp: In function 'const char* android::requestToString(int)':
+device/samsung/ancora_tmo/libril/ril.cpp:3435:14: error: 'RIL_REQUEST_SEND_ENCODED_USSD' was not declared in this scope
+         case RIL_REQUEST_SEND_ENCODED_USSD: return "SEND_ENCODED_USSD";
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3436:14: error: 'RIL_REQUEST_SET_PDA_MEMORY_STATUS' was not declared in this scope
+         case RIL_REQUEST_SET_PDA_MEMORY_STATUS: return "SET_PDA_MEMORY_STATUS";
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3437:14: error: 'RIL_REQUEST_GET_PHONEBOOK_STORAGE_INFO' was not declared in this scope
+         case RIL_REQUEST_GET_PHONEBOOK_STORAGE_INFO: return "GET_PHONEBOOK_STORAGE_INFO";
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3438:14: error: 'RIL_REQUEST_GET_PHONEBOOK_ENTRY' was not declared in this scope
+         case RIL_REQUEST_GET_PHONEBOOK_ENTRY: return "GET_PHONEBOOK_ENTRY";
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3439:14: error: 'RIL_REQUEST_ACCESS_PHONEBOOK_ENTRY' was not declared in this scope
+         case RIL_REQUEST_ACCESS_PHONEBOOK_ENTRY: return "ACCESS_PHONEBOOK_ENTRY"; 
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3440:14: error: 'RIL_REQUEST_DIAL_VIDEO_CALL' was not declared in this scope
+         case RIL_REQUEST_DIAL_VIDEO_CALL: return "DIAL_VIDEO_CALL"; 
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3441:14: error: 'RIL_REQUEST_CALL_DEFLECTION' was not declared in this scope
+         case RIL_REQUEST_CALL_DEFLECTION: return "CALL_DEFLECTION"; 
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3443:14: error: 'RIL_REQUEST_USIM_PB_CAPA' was not declared in this scope
+         case RIL_REQUEST_USIM_PB_CAPA: return "USIM_PB_CAPA"; 
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3444:14: error: 'RIL_REQUEST_LOCK_INFO' was not declared in this scope
+         case RIL_REQUEST_LOCK_INFO: return "LOCK_INFO"; 
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3450:14: error: 'RIL_REQUEST_GET_SERIAL_NUMBER' was not declared in this scope
+         case RIL_REQUEST_GET_SERIAL_NUMBER: return "GET_SERIAL_NUMBER"; 
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3451:14: error: 'RIL_REQUEST_GET_MANUFACTURE_DATE_NUMBER' was not declared in this scope
+         case RIL_REQUEST_GET_MANUFACTURE_DATE_NUMBER: return "GET_MANUFACTURE_DATE_NUMBER"; 
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3452:14: error: 'RIL_REQUEST_GET_BARCODE_NUMBER' was not declared in this scope
+         case RIL_REQUEST_GET_BARCODE_NUMBER: return "GET_BARCODE_NUMBER";
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3488:14: error: 'RIL_UNSOL_RESPONSE_IMS_NETWORK_STATE_CHANGED' was not declared in this scope
+         case RIL_UNSOL_RESPONSE_IMS_NETWORK_STATE_CHANGED: return "RESPONSE_IMS_NETWORK_STATE_CHANGED";
+              ^
+device/samsung/ancora_tmo/libril/ril.cpp:3489:14: error: 'RIL_UNSOL_STK_SEND_SMS_RESULT' was not declared in this scope
+         case RIL_UNSOL_STK_SEND_SMS_RESULT: return "RIL_UNSOL_STK_SEND_SMS_RESULT";
+              ^
+make: *** [/home/doadin/cm12/out/target/product/ancora_tmo/obj/SHARED_LIBRARIES/libril_intermediates/ril.o] Error 1
+
+#### make failed to build some targets (01:01 (mm:ss)) ####
