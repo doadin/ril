@@ -3136,17 +3136,6 @@ void RIL_onUnsolicitedResponse(int unsolResponse, void *data,
     bool shouldScheduleTimeout = false;
     RIL_RadioState newState;
 
-    for (int i = 0; i < (int)NUM_ELEMS(unsolResponse_conv); i++) {
-        if (unsolResponse_conv[i].old == unsolResponse) {
-            unsolResponse = unsolResponse_conv[i].curr;
-            RLOGD("RIL_onUnsolicitedResponse %d -> %d",
-                unsolResponse_conv[i].old, unsolResponse);
-            if (unsolResponse == 0) /* Unsupported */
-                return;
-            break;
-        }
-    }
-
     if (s_registerCalled == 0) {
         // Ignore RIL_onUnsolicitedResponse before RIL_register
         RLOGW("RIL_onUnsolicitedResponse called before RIL_register");
