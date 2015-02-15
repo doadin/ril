@@ -2808,8 +2808,14 @@ RIL_register (const RIL_RadioFunctions *callbacks) {
     }
 
     for (int i = 0; i < (int)NUM_ELEMS(s_unsolResponses); i++) {
-        assert(i + RIL_UNSOL_RESPONSE_BASE
+        /* Hack to include Samsung responses */
+        if (i > MAX_RIL_UNSOL - RIL_UNSOL_STK_SEND_SMS_RESULT) {
+            assert(i + SAMSUNG_UNSOL_STK_SEND_SMS_RESULT - MAX_RIL_UNSOL
                 == s_unsolResponses[i].requestNumber);
+        } else {
+            assert(i + RIL_UNSOL_RESPONSE_BASE
+                == s_unsolResponses[i].requestNumber);
+        }
     }
 
     // New rild impl calls RIL_startEventLoop() first
@@ -3118,17 +3124,34 @@ void RIL_onUnsolicitedResponse(int unsolResponse, void *data,
     bool shouldScheduleTimeout = false;
     RIL_RadioState newState;
 
-    if (s_registerCalled == 0) {
-        // Ignore RIL_onUnsolicitedResponse before RIL_register
-        ALOGW("RIL_onUnsolicitedResponse called before RIL_register");
-        return;
+    for (int i = 0; i < (int)NUM_ELEMS(unsolResponse_conv); i++) {
+        if (unsolResponse_conv[i].old == unsolResponse) {
+            unsolResponse = unsolResponse_conv[i].curr;
+            RLOGD("RIL_onUnsolicitedResponse %d -> %d",
+                unsolResponse_conv[i].old, unsolResponse);
+            if (unsolResponse == 0) /* Unsupported */
+                return;
+            break;
+        }
     }
 
-    unsolResponseIndex = unsolResponse - RIL_UNSOL_RESPONSE_BASE;
+    if (s_registerCalled == 0) {
+        // Ignore RIL_onUnsolicitedResponse before RIL_register
+        RLOGW("RIL_onUnsolicitedResponse called before RIL_register");
+        return;
+    }
+    
+    /* Hack to include Samsung responses */
+    if (unsolResponse > SAMSUNG_UNSOL_RESPONSE_BASE) {
+        unsolResponseIndex = unsolResponse - SAMSUNG_UNSOL_RESPONSE_BASE + MAX_RIL_UNSOL - RIL_UNSOL_RESPONSE_BASE;
+        RLOGD("SAMSUNG: unsolResponse=%d, unsolResponseIndex=%d", unsolResponse, unsolResponseIndex);
+    } else {
+        unsolResponseIndex = unsolResponse - RIL_UNSOL_RESPONSE_BASE;
+    }
 
     if ((unsolResponseIndex < 0)
         || (unsolResponseIndex >= (int32_t)NUM_ELEMS(s_unsolResponses))) {
-        ALOGE("unsupported unsolicited response code %d", unsolResponse);
+        RLOGE("unsupported unsolicited response code %d", unsolResponse);
         return;
     }
 
