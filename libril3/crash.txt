@@ -1,0 +1,27 @@
+I/DEBUG   (10485): *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+
+I/DEBUG   (10485): Build fingerprint: 'samsung/SGH-T679/SGH-T679:2.3.6/GINGERBREAD/UVLE1:user/release-keys'
+
+I/DEBUG   (10485): Revision: '0'
+
+I/DEBUG   (10485): ABI: 'arm'
+
+I/DEBUG   (10485): pid: 10659, tid: 10678, name: rild  >>> /system/bin/rild <<<
+
+I/DEBUG   (10485): signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
+
+I/DEBUG   (10485):     r0 00000031  r1 194dfa2a  r2 194dfa2a  r3 194dfa2a
+
+I/DEBUG   (10485):     r4 00000000  r5 40ab6b88  r6 40550fc0  r7 4054c424
+
+I/DEBUG   (10485):     r8 4054c424  r9 00000000  sl 00000000  fp 4053d30f
+
+I/DEBUG   (10485):     ip 40dae848  sp 40daed08  lr 4052dd23  pc 4052dd22  cpsr 600f0030
+
+I/DEBUG   (10485): 
+
+I/DEBUG   (10485): backtrace:
+
+I/DEBUG   (10485):     #00 pc 0003cd22  /system/lib/libsec-ril.so (requestGetStorageInfo+49)
+
+I/DEBUG   (10485):     #01 pc 0003cd1f  /system/lib/libsec-ril.so (requestGetStorageInfo+46)
