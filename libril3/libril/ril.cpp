@@ -2615,7 +2615,7 @@ static void debugCallback (int fd, short flags, void *param) {
             break;
         case 2:
             ALOGI ("Debug port: issuing unsolicited voice network change.");
-            RIL_onUnsolicitedResponse(RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED,
+            RIL_onUnsolicitedResponse(RIL_UNSOL_RESPONSE_NETWORK_STATE_CHANGED,
                                       NULL, 0);
             break;
         case 3:
@@ -3485,7 +3485,6 @@ requestToString(int request) {
         case RIL_UNSOL_EXIT_EMERGENCY_CALLBACK_MODE: return "UNSOL_EXIT_EMERGENCY_CALLBACK_MODE";
         case RIL_UNSOL_RIL_CONNECTED: return "UNSOL_RIL_CONNECTED";
         case RIL_UNSOL_VOICE_RADIO_TECH_CHANGED: return "UNSOL_VOICE_RADIO_TECH_CHANGED";
-        case RIL_UNSOL_RESPONSE_IMS_NETWORK_STATE_CHANGED: return "RESPONSE_IMS_NETWORK_STATE_CHANGED";
         case RIL_UNSOL_STK_SEND_SMS_RESULT: return "RIL_UNSOL_STK_SEND_SMS_RESULT";
         default: return "<unknown request>";
     }
