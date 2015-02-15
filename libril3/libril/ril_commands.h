@@ -122,9 +122,6 @@
     {0, NULL, NULL}, // 10004
     {RIL_REQUEST_SEND_ENCODED_USSD, dispatchVoid, responseVoid},
     {RIL_REQUEST_SET_PDA_MEMORY_STATUS, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_PHONEBOOK_STORAGE_INFO, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_PHONEBOOK_ENTRY, dispatchVoid, responseVoid},
-    {RIL_REQUEST_ACCESS_PHONEBOOK_ENTRY, dispatchVoid, responseVoid},
     {RIL_REQUEST_DIAL_VIDEO_CALL, dispatchVoid, responseVoid},
     {RIL_REQUEST_CALL_DEFLECTION, dispatchVoid, responseVoid},
     {RIL_REQUEST_READ_SMS_FROM_SIM, dispatchVoid, responseVoid},
