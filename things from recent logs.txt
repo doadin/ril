@@ -57,3 +57,43 @@ W/RILJ    (  943): 	at java.lang.Thread.run(Thread.java:818)
 
 
 D/RilRequest(  943): [5795]< RIL_REQUEST_VOICE_RADIO_TECH error: com.android.internal.telephony.CommandException: GENERIC_FAILURE ret=
+
+
+
+
+
+
+
+
+
+
+
+
+D/RILC    ( 1487): SAMSUNG: unsolResponse=11008, unsolResponseIndex=43
+
+E/use-Rlog/RLOG-RIL( 1487): unsupported multiclient unsolicited response code 1002
+
+E/use-Rlog/RLOG-RIL( 1487): RIL_onMultiClientUnsolicitedResponse:
+
+E/use-Rlog/RLOG-RIL( 1487): unsupported multiclient unsolicited response code 1009
+
+D/RILC    ( 1487): SAMSUNG: unsolResponse=11010, unsolResponseIndex=45
+
+D/SubController(  956): [getSlotId]- size == 0, return SIM_NOT_INSERTED instead
+
+D/SUB     (  491): [SubManager] [getSubId]- fail
+
+D/SubController(  956): [getSlotId]- size == 0, return SIM_NOT_INSERTED instead
+
+D/SUB     (  491): [SubManager] [getSubId]- fail
+
+E/use-Rlog/RLOG-RIL( 1487): currentState(): state(2)
+
+E/use-Rlog/RLOG-RIL( 1487): RADIO_STATE_SIM_READY : simCurrentStatus is <4>
+
+D/SubController(  956): [getSubId]- size == 0, return dummy instead
+
+D/TelephonyManager(  956): setTelephonyProperty property=gsm.operator.alpha propVal=
+
+D/SubController(  956): [getSubId]- size == 0, return dummy instead
+
