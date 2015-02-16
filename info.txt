@@ -5,3 +5,11 @@ modem > Kernel > libsamsung-ipc > libsamsung-ril > rild > libril > javaril
 
 
 3987693876309867 layers.....
+
+
+
+
+
+helpful
+
+https://bitbucket.org/cyanogenmod/android_device_samsung_i9300/commits/8395da10102d4a249e67d3fc99ce50111eab24f8
