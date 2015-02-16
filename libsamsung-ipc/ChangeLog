@@ -1,0 +1,501 @@
+Version 0.3.1
+=====================
+
+f5d2c45 gitignore: Binaries from tools
+c42fbce svc: String header
+c608d70 Ignore the autotools INSTALL file
+68c86c0 Fix crash in modemctrl after a failed bootstrap
+08b6b29 Properly handle errors bootstrapping modem
+67fe181 Drop the INSTALL file and let autotools copy it in
+4cb70f7 tools: Autotools intermediates cleanup
+a6240be tools: Proper arguments to ipc_client_poll
+3189c67 libsamsung-ipc version 0.3.0
+
+Version 0.3.0
+=====================
+
+5333aed External fds polling support
+ffda67f xmm626: Check modem status on read and write
+6f0dca4 sec: RSIM access extract helper
+43f51e0 rfs: Proper helpers
+688d331 sms: Arguments check
+d0de45e sms: SVC center addr extract helper
+c48926e sms: Size function for helpers that return data with non-explicit size
+5e4cb30 sec: Size function for helpers that return data with non-explicit size
+7d2ebf4 rfs: Size function for helpers that return data with non-explicit size
+056cf38 net: PLMN list extract helpers, PLMN type
+50be557 devices: Proper alignment (12 and 16 tabs of 4 spaces)
+9c72075 devices: Size limit when reading RFS data
+5bd35c7 call: Size function for helpers that return data with non-explicit size
+bb5f109 disp: Proper icon info structure and flags
+a96ecf4 gprs: Various bits and updates
+8d0b0f6 Missing gprs_activate/deactivate handlers definitions
+a7ae739 gprs: Fail causes import from Tizen
+394133a GPRS cid count is unsigned integer
+dbcd5f7 svc: Helpers
+2cdecfa Offset is unsigned int
+74e32c0 ipc_utils: New line before printing I/O debug
+1c4d4f7 sec: RSIM access helper
+873093a sms: Only copy when there is actual data
+379045e utils: Dedicated function for length/size
+bfb20b0 utils: Shared libraries don't allow for internal functions
+9691203 Data dump function replacement
+285ef23 sms: Save/del msg helpers, send msg correction
+c0eabb6 sms: Headers sort, pdu extract helper
+87fdd4b xmm626: HSIC ACKs are not reliable
+ca19c4c snd: Proper missing structures
+8cc083b ipc_utils: Utility to check whether a seq is valid
+d2ba034 call: DTMF status over state, burst response
+bf452ca call: Turns out mpty was not a typo for empty
+e4acdd0 misc: IPC_MISC_ME_VERSION request data and new helpers
+960d41a sec: Maximum password size is not so much the size of the size element
+c9ec8b0 sec: Cleanup memory before use
+1b0e45e sec: Proper prefixes and unused function removal
+daf8241 sec: Actually copy the PIN lengths
+5da6fcc net: Proper PLMN copy, without null terminating byte
+b3b4263 net: PLMN is always 6 bytes
+e201a04 net: Correct enumeration
+2384bd8 Generic xmm616 and xmm626 names
+1294c5f ipc: Carefully check for name or board name when detecting device
+eb927f9 pwr: Proper request/response values and structures
+db9cb92 rfs: Chunk size is not always greater than size
+9dca176 Global include path
+443e2a5 Android.mk: Override LOCAL_CFLAGS
+72df76b protocol: Commands and types are not the same
+e8f642a aries: Minor coding style correction
+c97e785 ipc_utils: Correct enumaration for headers
+738b07d ipc_utils: Enumerate send first, then recv
+121ae6d ipc_devices: Proper type for count and index
+420519c tools: ipc-test test program, for various purposes
+33246c7 tools: modemctrl tool rename, in favor of ipc-modem
+ebe96b1 ipc_utils: Request type string when sending
+583f877 libsamsung-ipc is maintained by the Replicant project
+a0332b5 Version-independent pkgconfig rules
+ff8032e Deprecated and unmaintained vapi removal
+0056452 ipc: Consistent coding style and major cleanup
+ec82c3a rfs: Consistent coding style, cleanup and fresh new implementation
+39ac0d2 utils: Files rename, new functions, proper types and few other cleanups
+60e9429 rfs: Proper type for size definitions
+e306f89 rfs: Proper IPC functions for nv_data specs, without generic fallback values
+5482a77 Extract in helpers naming
+828f125 Consistent coding style in helpers
+6cb0b59 Prefer official Samsung IPC protocol names
+ffc71f0 devices folder instead of device, for better consistency
+190984f Unified description of libsamsung-ipc
+20e1ea0 Correct enumeration of files and devices
+0b3a6b4 Follow consistent coding style in headers
+b2aaec5 device: Buffer has length and tail is footer
+da32427 Types are not commands
+71d0585 Good-looking copyright blocks, with the right order in copyright lines
+977dcde Android.mk cleanup
+7d78922 ipc_util: Print messages lengths
+adc29ca aries: Read and write data in proper buffer-sized chunks
+55e8de1 Samsung Galaxy Note 2 N7100 support
+f8bc990 Device detection mechanism improvments and more constitant devices naming
+0c33d96 sms: Save/del structures and related values
+736c6de svc: Relevant messages and structures definitions
+35f39ed Samsung Galaxy Note support
+43bd2e4 misc.h: tz, dl and dv values are explicitly signed
+b1feb0a Samsung Galaxy S3 (galaxys3) support
+63a33bd xmm6260: Correct SEC modem ohci sysfs path
+3b05565 ipc devices: Include structures definitions from devices headers
+026a7f4 Rename ipc_header to ipc_fmt_header, add ipc_rfs_header and utility functions
+d1e05cf util: Rename block_size to chunk
+25d384a Remove file read functions from ipc_util
+91c54ac rfs.c: Fix coding style and compilation warnings
+b3a8843 ipc.c: Check heandlers data create/destroy pointers
+250ba51 aries: Minor coding-style-related changes
+4527698 crespo: Minor coding-style-related changes
+58bedbd xmm6160: Minor coding-style-related changes
+10eb92c Major rework of xmm6260 common code (MIPI and HSIC) and xmm6260 devices code
+eb9cffa xmm6160: Rename modem_image to firmware to avoid confusion
+a795a6f xmm6160: Explicit PSI data argument name
+293c867 xmm6160: Use device-specific sizes and offsets
+a058b95 Prefix per-device headers definitions with the device name
+c79aeaf Split aries and crespo common code to xmm6160, along with major code rework
+1edc56a New utilities (not exposed by the API) for various I/O and ipc fill functions
+a81f656 ipc util: Do not use strdup, to avoid memory leak
+ddf605b More cosmetics on headers
+c99663f Get rid of wakelocks, this should be dealt with on the upper layers
+b73c6cf Rework handlers and ipc functions for better consistency
+0916c68 rfs.c: Coding style cosmetics
+41cee84 ipc.c: Coding style cosmetics
+b63737e ipc_client_send: Single function with return code
+94826c5 rfs.h: Coding style
+44d464f Coding style: Move ; around in for statements
+30ba6fd Add newline and indentation on long functions names
+c9dfae7 Refactor code for consistent coding style and avoid using assert
+0e0c698 Renamed ipc_private.h to ipc.h
+b8eb72b modemctrl: Update Copyright block for better accuracy
+af49aa6 Moved radio.h and types.h to samsung-ipc.h (API) and protocol.h (IPC protocol).
+256df8e Drop (incomplete) support for Samsung H1
+9d1137d Drop support for the (incomplete) old protocol implementation used on H1.
+e207275 Update changelog for new release
+
+Version 0.2.0
+=====================
+
+49e4a6e Update documentation in preparation of a new release
+1b76eae Update list of authors based on git history
+87fb149 Add missing modem_prj.h file to automake configuration
+48aba0e Fix outstanding compiler warnings
+950d2c3 Rules to build piranha code on Makefiles
+ba93873 xmm6260: Set message info data to NULL before alloc (or no alloc)
+dc5c21b modemctrl: Remove SIM initializing message
+f0a4b59 sec: Use correct SIM ready status value
+86dd098 disp: Second byte of icon info is the reception level in bars
+09ca2de prainha: Remove TODO comment
+a6d95bf Piranha (P5100/P3100 Galaxy Tab 2.0 tablets) support
+0ca230e Merge pull request #4 from Jooles/master
+588cc26 Added spica (i5700) to available devices in Android.mk
+146080c sec: RSIM access data structure when SIM ICC type != 1
+564a20c misc: Timezone value can be negative, use a signed char accordingly
+16fb15b sms: Correct memcpy argument (don't use a pointer to pointer)
+ed4d891 sec: correct binary represetation of SIM access commands
+4411155 Misc: Correct the value for time info message
+da6bf32 Permit explicit board name instead of device name
+617169f Aries: Stick a bit more with SEC ril, preventing some failures
+1c46f2f ipc: reset client structure after allocation to zero
+9574ece Fix wrong device detection; we have to check for board_name instead of device name
+314056a Fix vapi errors due to ipc_sms_send_msg and ipc_sms_deliv_report_msg renames.
+d9622e4 GPRS: Pass CID to activate/deactivate functions Aries: Use CID to activate/deactivate the corresponding iface
+f722771 SMS: Renamed structures according to messages names, build sms.c
+3b804a8 crespo: Kernel-version-dependant gprs specs
+896c02c Kernel version in IPC device desc, with detection code
+9c23156 Fix vapi errors due to ipc_net_current_plmn rename.
+9c55caa Fix vapi errors due to ipc_net_regist rename.
+96bfba2 Merge pull request #3 from GNUtoo/master
+cd97942 Fix VAPI's ipc_net_{regist_setup,plmn_sel_setup} renames for fsogsmd
+b21b779 samsung-ipc: cleanup to match common code style
+d45c70f maguro: cleanup code to match common code style
+b33a9e1 xmm6260: cleanup code a bit to match common code style
+51280f7 cleanup autoconf configuration
+ed87346 switch to GPLv2+ as license as decided by all authors per mail
+bf2596c update authors file with all people contributed to libsamsung-ipc
+e1ffca5 ipc: don't set a default log handler; should be set only on demand
+de43b72 SND: Add missing undocumented commands
+7a3189f ipc: fix gprs_get_iface functions
+c274c5b gprs: rename member of ipc_gprs_hsdpa_status to reg_state
+43adc72 call: fix retrieval of the number of a call
+3a9c878 ipc: refactor ipc_client_gprs_get_iface method to return iface name instead of using a parameter
+db18008 misc: add IPC_MISC_DEBUG_LEVEL message type
+1274e35 sec: add setup method for ipc_sec_change_locking_pw_set message type
+338c971 sec: rename ipc_sec_change_locking_pw to ipc_sec_change_locking_pw_set
+ce4b30c sec: add setup method for ipc_sec_phone_lock_set message type
+807ad04 Aries: Use new IPC open/close definitions
+e426cc4 sec: Corrected comments about data types
+7b05368 tools: drop not working forwarding tool
+d9eae11 net: renaming some parts to be more reasonable
+63d90f7 sec: add IPC_SEC_FACILITY_LOCK_TYPE_SC_UNLOCKED type
+697916d sec: rename ipc_sec_pin_status_response structure
+66d5c97 sec: rename IPC_SEC_PIN_STATUS to IPC_SEC_SIM_STATUS
+3baa91e sec: refactor type naming to be clean and not misleading
+c250956 Reformat log output for received/sent messages
+c4f9aa6 xm6269: drop log statement as it fills up the log output unnecessarily
+d619e86 Use correct helper method to print request type
+222f78a vapi: bind missing ipc_client_create_handlers_common_data method
+d500d71 maguro: try to load radio image from more than on source path
+d4f8a0b Make everything compile again after last merge
+aae7f36 Merge remote-tracking branch 'astarasikov/merge-24-aug'
+a6b8e7d maguro: replace constant with mask for boot reply
+5def3bc Revert "Add a delay to maguro fw loader to work around buggy init"
+10fab96 Merge branch 'morphis-master' into tuna-tracking
+74f505c Merge tag 'tuna-stc-jb-v1' into morphis-master
+d851f2b Add another method to free space used by a response message
+118643a Add cmd field to ipc_message_info structure which will be prefilled
+94ca3db Add identifiable named header file which should be the only one used by clients
+b11be64 [xmm6260] add ipc error checks
+5999a66 vapi: bind some more ipc client methods
+bbea04f re-enable wakelocks on xmm6260
+8f62bbb Add a delay to maguro fw loader to work around buggy init
+9875a66 Use static wakelock file descriptors
+d109d6c disable xmm6260 wake locks temporarily (until they are debugged)
+d79718e vapi: bind power_on/power_off and correct return types
+6658e65 maguro: fix warning about ignore return result
+d4f41d7 rfs: fix warnings about ignored return results from std. library functions
+81660e3 crespo: fix all warnings regarding ignored return value from std. library functions
+1628980 First round of fixing unnecessary warnings
+b44ee66 Prefix method correctly with ipc_client_
+7a9ad8c Simplify open/close handler signature
+7d6f56c vapi: update for recent changes to GPRS subsystem
+4bd5990 Implement maguro poweroff
+62c5b24 Silently ignore null client/message in ipc log
+e4403cb Make wakelocks not crespo-specific and add for xmm6260
+236e5a2 Merge pull request #1 from astarasikov/gps-fix
+89904c0 Fix GPS on tuna by setting the UART mux correctly
+f0379c8 Fix GPS on tuna by setting the UART mux correctly
+a72e249 GPRS: Get interface name given the connection ID (cid)
+dadca55 GPRS: added and completed structures, defines and reworked functions accordingly
+7090d36 Call: Added a few call end causes
+1777a0a XMM6260/Crespo: Fixed common_data_set_fd
+bd70ecb Removed device loop code (the upper layer must decide whether to loop or not)
+d626a32 Unified debug messages on send/recv with ipc_util functions
+78bf08e Removed deprecated util files
+0b8d066 Android.mk: include xmm6260 path for every device
+84cd42f XMM6260: Split code into galaxys2, maguro and xmm2620 (shared code) devices
+2eea520 XMM6260: Moved device-specific files to galaxys2 and maguro folders
+e94080b XMM6260: Always use ipc log handler, also reduced log output
+0bb1ce7 XMM6260: Renamed IO functions to give them an explicit name and cleanup
+9182387 XMM6260: Fixed functions names and braces
+985b168 XMM6260: Reworked modemctl and brought ipc client to most functions
+d4f9b16 XMM6260 I9250: Renamed and moved structures
+9243252 XMM6260 I9100: Renamed and moved structures
+ccbc15d XMM6260: Fix code indent Signed-off-by: Paul Kocialkowski <contact@paulk.fr>
+c691ac2 XMM6260: Split defines in header files
+645a8aa Reworked nv_data handling in nv_data_specs, moved some functions to gprs_specs
+0b6def0 Ordered devices by historical support order
+55017a8 XMM6260: Added GPRS capabilities handler
+174a1f2 Aries/Crespo: Added GPRS capabilities handler
+7768390 GPRS: New capabilities structure and related handler
+0ec570a RFS: Changed chunk size to 0x1000 when reading nv_data
+3197862 Using stored nv_data file and related functions instead of the default nv_data
+11320e7 RFS: Exported nv_data path functions
+52fb802 Set nv_data paths functions non-static so they can be reused in device code
+698f40a Allow EFS path to be overriden per-board
+364343a xmm6260 rfs cleanup: code style and compilation warnings
+771dafb RFS: added missing send/recv functions
+ec0da94 Change i9250 and i9100 to lowercase to fix runtime detection
+25a8c2e Cleanup xmm6260 ipc, prepare for rfs
+166f92e Fix compilation warnings
+2454f72 Update firmware loader to the latest version, fix makefiles for maguro/galaxys2
+3ee91dd Add the dirty, hackish and barely working xmm6260 modem support for galaxy nexus (tuna/maguro)
+9b9c03b GPRS port list setup function (currently with fixed values), needed for aries
+67bb78c Function to check if GPRS activation/deactivation functions are available
+63a3609 GPRS interface name function for crespo
+e0685f1 GPRS activation/deactivation functions for aries
+3efc903 Introducing device-specific GPRS activation/deactivation functions mechanism
+74664ce Bump version number to 0.2.0 for next cycle
+
+Version 0.1.0
+=====================
+
+7f65eda Update ChangeLog for release
+ed22d1f Add gitlog-to-changelot script to repository
+a4b28bc tools: use ${top_builddir} rather than ${top_srcdir}
+a68bb30 vapi: updates regarding binding issues
+8d493ae vapi: various updates regarding binding issues
+bcdc98b call: add pack method for dtmf burst send message
+f0fc5d0 Fixed ipc_sec_pin_status_noti change on vapi
+d7fd7cc Fixed modemctrl for sec header changes
+e64584f Fixed ipc_sec_phone_lock stuctures
+b441d89 Added SIM PIN-related structures on sec header
+130f933 vapi: update for recent changes to network related API
+8a57eac Install disp.h file too for IPC v4 protocol version
+e4deae1 vapi: use correct types for fields in Sms.SendMessage structure
+b9240c8 rfs: only dump RFS message content when debugging is enabled
+e9d4545 rfs: it should be possible for the modem to write at offset zero
+bf757ad crespo: bump buffer size if incoming data to 0x50000; highest data size seen is 0x40008
+e8c5de2 Define DEBUG when compiling with debugging enabled
+58559e4 Correct disp icon info structure for IPC-V4 devices
+9ab226a Removed unwanted diff file
+d3e5290 Added NET_MODE_SEL headers, fixed NET_PLMN_SEL structure and related function
+27a65c8 Revert "rfs.c: return NULL in case of error"
+b93b917 rfs.c: return NULL in case of error
+9b827bd Fixed coding style: space after if, for, while, etc
+b7e7b77 RFS NV item handling methods are now sending the io confirmation message directly
+16a6860 Update license header of the vapi description file
+0b260b9 Import two methods from samsung-ril to deal with rfs read/write nv item message types
+6f57cb2 Cleanup indentation in rfs.c
+c82cf76 Correct COPYING file to contain the GPLv3 license instead of LGPLv2.1
+0377e87 net: fix styling/naming/coding issues
+d015040 net: add structure to set network PLMN selection mode
+8e12bf3 Remove h1 relevant source files for now from Makefile
+f87ea5a h1: several fixes and adjustments to compile again
+23b0d82 Update Makefile to distribute all necessary headers files and compile h1 device support
+4a9af56 Fixed H1 device and devices-related fixes
+303fbc0 Adjust for recent changes to device creation structure
+e8bec37 Merge remote-tracking branch 'origin/paulk/rework-device-specific' into morphis/rework-device-specific
+1789f2a Modified ipc devices handling to use a table and permit explicit device name
+c41dcc6 Register aries handlers on library initialization
+cec8f3b Add aries device for compilation and register it's handlers on startup
+20ab22b Add DEVICE_IPC_v4 define to cflags variable of pkgconfig file
+6ce237f Rework IPC client creation to detect device automatically on startup
+604ff37 We don't ship headers files for the H1 device with autotools version
+3f3690d Rework device specific code so we can build one library for all devices now
+151efe3 vapi: fix several binding problems
+a1de0dc Register aries handlers on library initialization
+60977f9 Add aries device for compilation and register it's handlers on startup
+73131b5 Add DEVICE_IPC_v4 define to cflags variable of pkgconfig file
+35ee69d Rework IPC client creation to detect device automatically on startup
+2ac977c We don't ship headers files for the H1 device with autotools version
+9a87ce7 Rework device specific code so we can build one library for all devices now
+1464578 Add structure definition for IPC_NET_MODE_SEL message
+beab35f vapi: use gint16 instead of gint8 for PhoneState enum
+f22b2a9 Fixed ss.h header installation with autotools
+51ea3aa Adjust to get everything compiling with autotools again
+a6fab22 Added USSD defines and actions
+dcf7ed7 Added a GPRS error code and a missing function prototype
+dcdee94 Added support for aries devices (galaxy s, galaxy tab, perhaps more)
+af1854b Switched crespo headers to ipc-v4 as these are shared between multiple devices
+db817ef Cosmetics on ipc.c
+a29b8e0 vapi: make string parameters nullable
+71f04e8 Bump required openssl version 1.0.0e
+b71736e gprs: adjust setup method so we can deactivate a gprs context now
+59a35f3 modemctrl: add command to bootstrap modem only
+e140dbb Revert "Switch version from 0.1.0 to 1"
+8815d00 Merge branch 'morphis/forward'
+33d6751 Switch version from 0.1.0 to 1
+d9f9fda Drop GITV from configure script; it's not needed
+4a65fbd tools: forward: use modem_io structure to determine size of data we read
+1122ae7 tools: add first and untested version of a simple forward utility
+b469707 Modified handlers with common handlers data and device-specific functions
+bedac84 Fixed tests on various handlers-related functions
+8d9a2ec WIP: socket stuff for galaxy s
+867488c Start adding support for Samsung Galaxy S
+6164e00 Fixed SND define that prevented in-call volume change to work
+d99224d Fixed Makefile.am for rfs.h
+c97c304 Removed remaining crespo_nv_data files
+57baab4 Moved nv_data functions and headers to rfs.c/rfs.h, plus some fixes
+eb6ac17 Added missing stdio.h on gen.c
+716e284 Updated ipc_command_to_str and replaced sms.h tabs by spaces
+418317e Set negative rc for errors, plus cosmetics
+b7d5749 Finished crespo RFS implementation and code cleanup
+a1a3b71 Added accuracy to crespo's struct ipc_gen_phone_res and added check function
+b3ae130 Added RFS headers and RECV function for crespo
+fb3cb9b Removed non-existant functions prototypes.
+d300c32 vapi: correct binding of enumeration values
+cb37d8d vapi: bind new sound API for chaging audio volume
+e912d36 Install missing header files snd.h and device/h1/sms.h too
+3c57bfe Use correct indentation
+00de0ea Added SND defines and structures
+a874a1e Added DTMF support and corrected call structure
+bfe37a7 vapi: some minor corrections to support vala-0.14
+3c98c20 vapi: some minor changes and implement method to retrieve single plmn entries
+157b91c Update .gitignore file
+76e3d40 vapi: bind SMS structures and methods
+41e793e vapi: bind additional misc functionality to retrieve serial number from baseband
+d9c5aa0 Added IPC_MISC_ME_SN types (it's not only for IMEI) and corrected structure
+4952a56 Corrected wake_lock in crespo
+7d34a9c misc: add misc_me_sn struct
+2bbccf3 Corrected/splitted NET/SMS/PWR headers for crespo and added french PLMN data
+013c60b vapi: add missing sound message types
+f6b8d33 Split ipc_call_list_entry message structure for h1 and crespo device
+e9e35e2 Add state values as defines for ipc_call_list_entry message
+a871322 Fix missing iteration in method ipc_call_list_response_get_entry with num = 0
+927ac03 Some minor changes to get method ipc_call_outgoing_setup working correctly
+6a3b545 vapi: fix naming of ipc_call_outgoging_setup method
+956c646 Rewritten modemctrl to provide an usable test binary
+a1a0fe6 Switched utility functions to ipc_utils (for client-side logging)
+53d8243 Switched crespo's nv_data functions to the client log handler instead of printf
+cf70576 Add missing $ for use of variable $OPENSSL_REQUIRED in configure.ac file
+62cd512 Added per-device call.h to the include/ Makefile.am
+2410b84 Fixed Makefile.am on tools/ (added defines while building)
+7bdcfaa Split call headers and added some SND defines
+f96de31 Implemented minimal ipc upper-layer in modemctrl, with auto call functions
+c9210b6 Corrected wake_lock in crespo_ipc and split struct ipc_call_outgoing
+644af30 Only print hexdump for messages when build in debug mode
+f1262be Revert "Bring back removed IPC_NET_ACCESS_TECHNOLOGY_... defines"
+9e6ff91 Setting the the handlers for several operations should be done in higher levels of the app stack
+924962f Adjust vala binding to suite for the latest changes to the library API
+3f2302f Add DEVICE_H1 or DEVICE_CRESPO as define to CFLAGS
+e27e29d Install device specific headers files too
+a449ed3 Bring back removed IPC_NET_ACCESS_TECHNOLOGY_... defines
+d04d16c Merge branch 'master' into master-next
+84efd7c Comment some not compiling code in modemctrl tool
+0308a18 Fixed IPC_PWR_PHONE_STATE (from SEC RIL logs) removed last SIMIO bits + other stuff
+3e24a8a Fixed struct ipc_misc_me_version for crespo (1 byte offset)
+620de92 Removed SIM IO data and functions: handled by upper-layer code.
+6f2a990 New handlers structure (a data pointer for each handler function)
+4ab5a70 Added SIM IO table (from FSO), related helpers, crespo SMS ACK and corrections
+f492374 Add vim modeline for uniform indentation
+b722c61 Fix several places in code for latest infrastructure changes
+d74590f fix autotools setup to support the new device specific structure
+8fd1410 Fix mistake in vala binding
+4023f33 Merge remote-tracking branch 'ius/for-morphis' into master-next
+3fcbca9 Various changes to code and vala binding regarding call API
+28cbef8 net: correct net_regist_get and add helper
+7d53141 h1: add missing payload memcpy in h1_ipc_send
+635bcd5 introduce device-specific includes, split h1/crespo gen_resp/net_regist
+29e0986 explicitly cast strncpy parameter to char*
+49b8e81 types: revert indi/noti/resp rename
+17e2ec0 Corrected Android.mk, crespo_ipc file, some headers and helpers.
+5118f77 h1: dump ipc messages to log
+cfd471f replace ipc_request and ipc_response by a single struct ipc_message_info
+2b9aa23 split devices, require compile-time device selection
+90b3b7d gprs: revert e28dc6d and insert missing message type
+8b39af2 added handlers support and default handlers for crespo.
+aeb7a4c fix various compilation warnings
+a38db58 Add setup method for call outgoing message and various cleanups for call messages
+cb1d563 gprs: add some missing unknown bytes to ipc_gprs_ip_configuration message
+8e15701 Fixup network registration message
+e28dc6d gprs: fix wrong id for IPC_GPRS_IP_CONFIGURE message type
+b4c84d9 Some little updates for gprs message structures
+fcc205d Add setup method for ipc_sec_pin_status_set message
+4771ea1 vapi: add a data property to each structure which returns the structure as byte array
+5c29db2 Implement several parts of known gprs messages types
+db2112e A plmn is only five byte long instead of six bytes
+ef01149 Updates for retrieve imsi and rsim data from response messages
+ffc43da Various updates and corrections
+9b58ea4 Minor update for network registration info structure in vala binding
+a348eea Various updates regarding better vala integration
+3081adc Updated Android.mk and added return 0; to make it build on Android.
+eb4b7e1 Add helper method to parse imsi from response data
+80080d0 Add sms message types to vala API description
+8dfd9cb Correct little mistake in vala API description
+faf79ee No free function for VersionMessage
+9663787 Reorder fields in generic phone response message
+716efc1 Updates for the vala API description
+6f5f9d7 More work regarding vala APi description
+5880467 Rename IPC_PWR_PHONE_ONLINE to IPC_PWR_PHONE_STATE according to samsungs android implementation
+c54f0cc Add a lot more enums and structs to the vala api description
+05843cc Remove more line breaks and add additional logging output
+635213c Remove line break in crespo ipc implementation from logging method calls
+0de463c Implement handling of additional arguments in ipc_client_log method
+3ce2d8a Don't use and c implemented to_string method anymore
+6e38bf9 Use new logging functionality in crespo client implementation
+e7d27d2 Implement log handler delegate the user can set to forwarding logging output to another target
+27ff8ab Combine all message types in one enumeration and add a to_string method for it
+977e031 Use strdup when returning a string in ipc_command_type_to_string method
+e6d23fa Several updates regarding better vala api description support
+40bbce7 Add method to print command type of response messages to vala api description
+5916336 Export string representation creation methods in vala api description
+3581333 crespo: if reading nv data from filesystem fail handle this correctly
+f3e3985 Fix mistake in vala api description
+2a02cc8 crespo: fixup reading radio image from mtd on bootstrap
+0fa1f15 Add some more message types and structure to the vala api description
+3d4089b Adjust name of array length property in vala API description
+4029ede Name method ipc_client_set_delegates correctly
+46a0b76 crespo_ipc_client_recv: convert from error to info output
+0cd14d3 Implement ipc_client_recv method so we can now retrieve data from the modem
+53ea218 Rename response types and export them together with request ones in the vapi
+743ede5 Rework API of this library to integrate better with other environments than Android
+1cec835 tools: modemctrl: implement bootstrap, power on/off commands
+3780471 tools: modemctrl: bootstrap the modem before using it
+43f9048 Add modemctrl utility to test functionality of samsung-ipc
+ddefad2 Add openssl as dependency
+b54d12c Add additional method to set the file description for work
+458fd1f Several update regarding integration in other userland environements than android
+f6bbbfa Use ipc ops in public API methods
+7d80f41 Export new API functions with library headers
+8d44ee2 Remove files which should not be hidden from .gitignore
+43dbcb5 Name ipc code lines not visible for the public with private postfix
+a76fbd1 Implement generic interface for ipc API
+66e708c Add .gitignore file
+a3ac92b Fix includes for new structure and add required third argument for open function
+5a5485e Basic automake environment for building the library
+e3465cd Move all device specific source files into main source directory
+acce400 Add missing source files
+b6ae4ae Move all source code into samsung-ipc directory
+f74d8e2 devices: add support for Nexus S
+31ecac1 ipc_msg_send: pass frame sequence number as mseq instead of aseq
+d532bc5 test: check for null before attempting to free response data pointer
+1ba9398 devices/h1: correct radio.h include
+3369f3e devices: add support for Samsung H1
+7bb4a47 Massive cleanup & device specific frame handling
+4dea3cd util: remove leftover android_rssi declaration
+d3bd80a Rename library to libsamsung-ipc
+a3c46bd sec: improve PIN handling
+af83423 radio: add generic response group/type
+caeb342 net: update net_regist
+79e499a add misc_me_version and misc_me_imsi
+173e0f7 call: update call_list struct and defines
+29e532d sec: add RSIM_ACCESS support
+d7b2d81 net: add NET_REGIST
+d5cb465 expose msm_send and add method to msm_request_info
+ce642e6 sec: update SEC_PIN_STATUS types
+41306d2 radio: remove SEC_PIN_STATUS stub handler
+a63200d sec: add sim card types
+eb96493 Cleanup, preliminary calling/sms support
+6e47b9e radio: fix request_id type
+cc447d0 radio: add default rx callback
+55a68aa radio: improve frame parsing

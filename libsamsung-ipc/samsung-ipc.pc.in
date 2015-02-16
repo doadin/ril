@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+datarootdir=@datarootdir@
+datadir=@datadir@
+
+Name: libsamsung-ipc
+Description: Free software implementation of the Samsung IPC modem protocol, found in many Samsung devices
+Version: @VERSION@
+Requires:
+Libs: -L${libdir} -lsamsung-ipc
+Cflags: -I${includedir}/samsung-ipc
