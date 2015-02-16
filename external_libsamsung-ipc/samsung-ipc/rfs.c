@@ -26,7 +26,7 @@
 #include <errno.h>
 #include <sys/stat.h>
 
-#include <md5.h>
+#include <openssl/md5.h>
 
 #include <samsung-ipc.h>
 
