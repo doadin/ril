@@ -41,7 +41,7 @@ LOCAL_SRC_FILES := \
 LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH) \
 	$(LOCAL_PATH)/include \
-	external/libsamsung-ipc/include \
+	$(LOCAL_PATH)/libsamsung-ipc/include \
 	hardware/libhardware_legacy/include \
 	system/core/include
 
