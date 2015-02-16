@@ -1,0 +1,7 @@
+modem > Kernel > libsec-ril                   > rild > libril > javaril
+                (samsung-ril+libsamsung-ipc)
+
+modem > Kernel > libsamsung-ipc > libsamsung-ril > rild > libril > javaril
+
+
+3987693876309867 layers.....
