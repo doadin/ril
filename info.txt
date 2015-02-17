@@ -14,6 +14,11 @@ so.....libsamsung-ipc is rild?
 
 RIL Daemon version: Samsung RIL(IPC) v2.0
 
+so
+
+modem > kernel     > rild > libsec-ril                           > libril > android
+        (/dev/smd0)         (handels ril_init and samsung unsol)
+
 
 
 
