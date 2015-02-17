@@ -6,6 +6,10 @@ modem > Kernel > libsamsung-ipc > libsamsung-ril > rild > libril > javaril
 
 3987693876309867 layers.....
 
+from replicant
+
+Modem <=> Linux kernel <=> libsamsung-ipc <=> Samsung-RIL <=> Android framework <=> Android applications
+
 
 
 
