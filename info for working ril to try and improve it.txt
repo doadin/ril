@@ -1,0 +1,176 @@
+  switch ( v3 )
+  {
+    case 1000:
+      v23 = dword_AE60DAFC();
+      v24 = android::Parcel::writeInt32((android::Parcel *)&v34, v23);
+      v25 = ((int (__fastcall *)(int))dword_AE60DAFC)(v24);
+      v26 = radioStateToString(v25);
+      sprintf(&byte_AE60BA9C, "%s {%s}", &byte_AE60BA9C, v26);
+      break;
+    case 1008:
+      __asm { VMOV            R2, R3, D8 }
+      android::Parcel::writeInt64((android::Parcel *)&v34, _R2);
+      break;
+    case 1009:
+      if ( dword_AE60DA50 > 0 )
+        v20 = sub_AE604DD4(dword_AE60DA50, (android::Parcel *)&v34);
+      goto LABEL_26;
+  }
+  v20 = android::sendUnsolicitedResponses((android *)&v34, v21);
+  
+  
+#define RIL_UNSOL_RESPONSE_BASE 1000
+#define RIL_UNSOL_RESPONSE_RADIO_STATE_CHANGED 1000
+#define RIL_UNSOL_NITZ_TIME_RECEIVED  1008
+#define RIL_UNSOL_SIGNAL_STRENGTH  1009
+
+
+int __fastcall RIL_onUnsolicitedResponse(signed int a1, int a2, int a3)
+{
+  signed int v3; // r4@1
+  int v4; // r10@1
+  android *v5; // r0@1
+  int v6; // r11@1
+  int v8; // r3@4
+  int v9; // r1@5
+  const char *v10; // r2@5
+  char *v11; // r9@7
+  int v12; // r9@11
+  int v13; // r5@11
+  int v19; // r0@17
+  signed int v20; // r0@17
+  android::Parcel *v21; // r1@17
+  int v23; // r0@21
+  int v24; // r0@21
+  unsigned int v25; // r0@21
+  int v26; // r0@21
+  bool v27; // r4@26
+  int v28; // r0@27
+  size_t v29; // r0@32
+  int v30; // r0@32
+  void *v31; // r7@32
+  const void *v32; // r4@32
+  size_t v33; // r0@32
+  int v34; // [sp+0h] [bp-60h]@17
+
+  v3 = a1;
+  v4 = a2;
+  v5 = (android *)&unk_AE60CB88;
+  v6 = a3;
+  if ( !dword_AE60DA6C )
+    return _android_log_print(5, "RILC", "RIL_onUnsolicitedResponse called before RIL_register");
+  if ( v3 <= 10999 )
+  {
+    v8 = v3 - 1000;
+    if ( (unsigned int)(v3 - 1000) > 0x1E )
+    {
+      v9 = (int)"RILC";
+      v10 = "unsupported unsolicited response code %d";
+      return _android_log_print(6, v9, v10, v3);
+    }
+    v11 = (char *)&unk_AE60B238;
+  }
+  else
+  {
+    v8 = v3 - 11000;
+    if ( (unsigned int)(v3 - 11000) > 0x11 )
+    {
+      v9 = (int)"RILC";
+      v10 = "unsupported oem unsolicited response code %d";
+      return _android_log_print(6, v9, v10, v3);
+    }
+    v11 = (char *)&unk_AE60B3AC;
+  }
+  v12 = (int)&v11[12 * v8];
+  v13 = *(_DWORD *)(v12 + 8);
+  if ( v13 == 1 )
+    v5 = (android *)acquire_wake_lock(1, "radio-interface");
+  else
+    v13 = 0;
+  __asm { VLDR            D8, =0.0 }
+  if ( _ZF )
+  {
+    _R0 = android::elapsedRealtime(v5);
+    __asm { VMOV            D8, R0, R1 }
+  }
+  v19 = requestToString(v3);
+  sprintf(&byte_AE60BA9C, "[UNSL]< %s", v19);
+  android::Parcel::Parcel((android::Parcel *)&v34);
+  android::Parcel::writeInt32((android::Parcel *)&v34, 1);
+  android::Parcel::writeInt32((android::Parcel *)&v34, v3);
+  v20 = (*(int (__fastcall **)(int *, int, int))(v12 + 4))(&v34, v4, v6);
+  if ( v20 )
+  {
+    if ( v13 )
+      release_wake_lock("radio-interface");
+    return android::Parcel::~Parcel((android::Parcel *)&v34);
+  }
+  switch ( v3 )
+  {
+    case 1000:
+      v23 = dword_AE60DAFC();
+      v24 = android::Parcel::writeInt32((android::Parcel *)&v34, v23);
+      v25 = ((int (__fastcall *)(int))dword_AE60DAFC)(v24);
+      v26 = radioStateToString(v25);
+      sprintf(&byte_AE60BA9C, "%s {%s}", &byte_AE60BA9C, v26);
+      break;
+    case 1008:
+      __asm { VMOV            R2, R3, D8 }
+      android::Parcel::writeInt64((android::Parcel *)&v34, _R2);
+      break;
+    case 1009:
+      if ( dword_AE60DA50 > 0 )
+        v20 = sub_AE604DD4(dword_AE60DA50, (android::Parcel *)&v34);
+      goto LABEL_26;
+  }
+  v20 = android::sendUnsolicitedResponses((android *)&v34, v21);
+LABEL_26:
+  v27 = v3 == 1008;
+  if ( v20 )
+    v28 = v27;
+  else
+    v28 = 0;
+  if ( v28 )
+  {
+    if ( dword_AE60DA70 )
+    {
+      free((void *)dword_AE60DA70);
+      dword_AE60DA70 = 0;
+    }
+    v29 = android::Parcel::dataSize((android::Parcel *)&v34);
+    dword_AE60DA70 = (int)malloc(v29);
+    v30 = android::Parcel::dataSize((android::Parcel *)&v34);
+    v31 = (void *)dword_AE60DA70;
+    dword_AE60DA74 = v30;
+    v32 = (const void *)android::Parcel::data((android::Parcel *)&v34);
+    v33 = android::Parcel::dataSize((android::Parcel *)&v34);
+    memcpy(v31, v32, v33);
+  }
+  if ( v13 )
+  {
+    if ( dword_AE60BA90 )
+      *(_DWORD *)(dword_AE60BA90 + 4) = 1;
+    dword_AE60BA90 = sub_AE603080((int)sub_AE6050A0, 0, (int)&unk_AE607BAC);
+  }
+  return android::Parcel::~Parcel((android::Parcel *)&v34);
+}
+
+signed int __fastcall android::sendUnsolicitedResponses(android *this, android::Parcel *a2)
+{
+  signed int result; // r0@2
+
+  if ( dword_AE60DA50 > 0 )
+    result = sub_AE604DD4(dword_AE60DA50, this);
+  else
+    result = 0;
+  return result;
+}
+
+in logs 1002 and 1009 are seen i think 1002 is happening because since libsec-ril is version 3 and not 6 
+we see in the opensource code of libsamsung-ril that 1002 should be RIL_UNSOL_RESPONSE_NETWORK_STATE_CHANGED 
+instead of RIL_UNSOL_RESPONSE_VOICE_NETWORK_STATE_CHANGED 1002.
+
+As for 1009 we can see in the above code that there is a case to handle it which is missing from our opensource we have a case
+for 1008(RIL_UNSOL_NITZ_TIME_RECEIVED) and 1000(RIL_UNSOL_RESPONSE_RADIO_STATE_CHANGED). Whcih both are seen in the above decompiled code
+too but we dont have a case for 1009(RIL_UNSOL_SIGNAL_STRENGTH).
+  
