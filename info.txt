@@ -10,6 +10,10 @@ from replicant
 
 Modem <=> Linux kernel <=> libsamsung-ipc <=> Samsung-RIL <=> Android framework <=> Android applications
 
+so.....libsamsung-ipc is rild?
+
+RIL Daemon version: Samsung RIL(IPC) v2.0
+
 
 
 
